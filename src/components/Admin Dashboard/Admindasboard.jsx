@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaHotel, FaMapMarkedAlt, FaUserTie, FaUsers, FaCalendarCheck, FaBus } from 'react-icons/fa';
-import './AdminDashboard.css';
+import './Admindashboard.css';
 
 const AdminDashboard = () => {
   const navigate = useNavigate();
