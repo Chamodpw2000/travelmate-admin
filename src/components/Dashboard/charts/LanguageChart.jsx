@@ -8,7 +8,7 @@ const LanguageChart = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/guide-analytics/language-distribution')
+    axios.get('https://travelmate-backend-zuqb.onrender.com/api/guide-analytics/language-distribution')
       .then(res => {
         const formatted = res.data.map(item => ({
           name: item._id,

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3000/api/user-analytics';
+const API_URL = 'https://travelmate-backend-zuqb.onrender.com/api/user-analytics';
 
 export const fetchAllUserAnalytics = async () => {
   try {

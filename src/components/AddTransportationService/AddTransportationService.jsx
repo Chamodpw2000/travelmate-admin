@@ -120,7 +120,7 @@ function AddTransportationService() {
       formDataCardImage.append("image", cardImage);
 
       const responseCardImage = await axios.post(
-        "http://localhost:3000/upload",
+        "https://travelmate-backend-zuqb.onrender.com/upload",
         formDataCardImage,
         {
           headers: { Accept: "application/json" },
@@ -139,7 +139,7 @@ function AddTransportationService() {
         
 
         const response = await axios.post(
-          "http://localhost:3000/travelmate/add-transportation-service",
+          "https://travelmate-backend-zuqb.onrender.com/travelmate/add-transportation-service",
           updatedDetails
         );
 

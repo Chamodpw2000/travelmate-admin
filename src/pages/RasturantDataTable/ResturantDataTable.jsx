@@ -73,7 +73,7 @@ const RestaurantDataTable = () => {
 
   const fetchRestaurants = async () => {
     try {
-      const response = await fetch('http://localhost:3000/travelmate/allRestaurants');
+      const response = await fetch('https://travelmate-backend-zuqb.onrender.com/travelmate/allRestaurants');
       const data = await response.json();
       setRecords(data);
       setFilteredRecords(data);
@@ -101,7 +101,7 @@ const RestaurantDataTable = () => {
   async function handleDeleteSelected() {
     try {
       for (let row of selectedRows) {
-        await fetch("http://localhost:3000/travelmate/deleteRestaurant", {
+        await fetch("https://travelmate-backend-zuqb.onrender.com/travelmate/deleteRestaurant", {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3000/api/booking-analytics';
+const API_URL = 'https://travelmate-backend-zuqb.onrender.com/api/booking-analytics';
 
 export const fetchAllBookingAnalytics = async (year = new Date().getFullYear()) => {
   try {

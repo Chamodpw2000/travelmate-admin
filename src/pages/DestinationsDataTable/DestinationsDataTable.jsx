@@ -63,7 +63,7 @@ const DestinationsDataTable = () => {
 
   // Fetch data from API
   useEffect(() => {
-    axios.get('http://localhost:3000/travelmate/allDestinations')
+    axios.get('https://travelmate-backend-zuqb.onrender.com/travelmate/allDestinations')
       .then(response => {
         setRecords(response.data);
       })
@@ -101,7 +101,7 @@ const DestinationsDataTable = () => {
   async function handleDeleteSelected() {
     try {
       for (let row of selectedRows) {
-        await fetch("http://localhost:3000/travelmate/deleteDestination", {
+        await fetch("https://travelmate-backend-zuqb.onrender.com/travelmate/deleteDestination", {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",

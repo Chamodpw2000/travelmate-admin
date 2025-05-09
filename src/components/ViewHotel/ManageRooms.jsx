@@ -51,7 +51,7 @@ const ManageRooms = () => {
 
     const deleteImagesFromMongo = async (images) => {
         try {
-            await axios.delete("http://localhost:3000/hotels/deleteroomimage", {
+            await axios.delete("https://travelmate-backend-zuqb.onrender.com/hotels/deleteroomimage", {
                 data: { images }
             });
         } catch (error) {
@@ -152,7 +152,7 @@ const ManageRooms = () => {
             const uploadedImages = [...initialImages, ...tempuploadedImages];
             editedRoom.images = uploadedImages;
 
-            const response = await axios.put('http://localhost:3000/hotels/editroom', editedRoom);
+            const response = await axios.put('https://travelmate-backend-zuqb.onrender.com/hotels/editroom', editedRoom);
 
             if (response.status === 200 || response.status === 201) {
                 await Swal.fire({

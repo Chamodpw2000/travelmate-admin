@@ -85,7 +85,7 @@ const AddRoom = () => {
                 total: parseInt(roomData.total)
             };
     
-            await axios.post('http://localhost:3000/hotels/addroom', data);
+            await axios.post('https://travelmate-backend-zuqb.onrender.com/hotels/addroom', data);
             
             setIsLoading(false); // Clear loading state before showing success message
             

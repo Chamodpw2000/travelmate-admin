@@ -50,7 +50,7 @@ const ManageVehicals = () => {
             
             if (result.isConfirmed) {
                 try {
-                    const response = await axios.put('http://localhost:3000/transportation/deleteVehical',vehical);
+                    const response = await axios.put('https://travelmate-backend-zuqb.onrender.com/transportation/deleteVehical',vehical);
                     if (response.status === 200) {
                         await Swal.fire({
                             icon: 'success',
@@ -128,7 +128,7 @@ const ManageVehicals = () => {
 
     const deleteImagesFromMongo = async (images) => {
         try {
-            await axios.delete("http://localhost:3000/transportation/deleteVehicalImage", {
+            await axios.delete("https://travelmate-backend-zuqb.onrender.com/transportation/deleteVehicalImage", {
                 data: { images }
             });
         } catch (error) {
@@ -195,7 +195,7 @@ const ManageVehicals = () => {
             editedVehical.images = uploadedImages;
             editedVehical.tid = transportationServiceDetails.id;
 
-            const response = await axios.put('http://localhost:3000/transportation/editVehical', editedVehical);
+            const response = await axios.put('https://travelmate-backend-zuqb.onrender.com/transportation/editVehical', editedVehical);
 
             if (response.status === 200 || response.status === 201) {
                 await Swal.fire({
@@ -241,7 +241,7 @@ const ManageVehicals = () => {
             setIsLoading(true);
             try {
                 const response = await axios.get(
-                    `http://localhost:3000/travelmate/viewTransportationService/${id}`
+                    `https://travelmate-backend-zuqb.onrender.com/travelmate/viewTransportationService/${id}`
                 );
                 if (response.data.success) {
                     setTransportationServiceDetails(response.data.data);

@@ -2,7 +2,7 @@
 
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:3000/travelmate';
+const API_BASE_URL = 'https://travelmate-backend-zuqb.onrender.com/travelmate';
 
 export const fetchAnalyticsData = {
     getPriceDistribution: () => axios.get(`${API_BASE_URL}/price-distribution`),
@@ -14,7 +14,7 @@ export const fetchAnalyticsData = {
 };
 
 
-const API_URL = 'http://localhost:3000/api';
+const API_URL = 'https://travelmate-backend-zuqb.onrender.com/api';
 
 export const fetchDestinations = async () => {
   try {

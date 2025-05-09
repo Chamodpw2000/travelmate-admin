@@ -166,7 +166,7 @@ const AddDestination = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/travelmate/addDestination",
+        "https://travelmate-backend-zuqb.onrender.com/travelmate/addDestination",
         destinationDetails
       );
 

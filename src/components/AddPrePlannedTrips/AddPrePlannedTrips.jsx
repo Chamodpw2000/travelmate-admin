@@ -57,7 +57,7 @@ const AddPrePlannedTrips = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/travelmate/addPrePlannedTrips",
+        "https://travelmate-backend-zuqb.onrender.com/travelmate/addPrePlannedTrips",
         prePlannedTripDetails
       );
       console.log("Trip added successfully", response.data);

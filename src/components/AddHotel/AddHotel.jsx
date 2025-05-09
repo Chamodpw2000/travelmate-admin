@@ -101,7 +101,7 @@ const AddHotel = () => {
     formDataCardImage.append('image', cardImage);
 
     try {
-      const responseCardImage = await axios.post('http://localhost:3000/upload', formDataCardImage, {
+      const responseCardImage = await axios.post('https://travelmate-backend-zuqb.onrender.com/upload', formDataCardImage, {
         headers: { Accept: 'application/json' },
       });
       responseDataCardImage = responseCardImage.data;
@@ -116,7 +116,7 @@ const AddHotel = () => {
       try {
         console.log("Accommodation Details:", accommodationDetails);
         
-        const response = await axios.post("http://localhost:3000/travelmate/addAccomodation", accommodationDetails);
+        const response = await axios.post("https://travelmate-backend-zuqb.onrender.com/travelmate/addAccomodation", accommodationDetails);
 
         if (response.data.success) {
           alert("Accommodation added successfully!");

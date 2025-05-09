@@ -72,7 +72,7 @@ const HotelDataTable = () => {
   useEffect(() => {
     const fetchAccommodations = async () => {
       try {
-        const response = await fetch('http://localhost:3000/travelmate/allAccomodations');
+        const response = await fetch('https://travelmate-backend-zuqb.onrender.com/travelmate/allAccomodations');
         const data = await response.json();
         setRecords(data); // Set the fetched data to records state
         setFilteredRecords(data); // Initially set filtered records to all fetched data
@@ -120,7 +120,7 @@ const HotelDataTable = () => {
   async function handleDeleteSelected() {
     try {
       for (let row of selectedRows) {
-        await fetch('http://localhost:3000/travelmate/deleteAccommodation', {
+        await fetch('https://travelmate-backend-zuqb.onrender.com/travelmate/deleteAccommodation', {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json',

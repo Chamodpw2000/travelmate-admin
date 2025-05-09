@@ -173,7 +173,7 @@ const AddGuide = () => {
       formDataCardImage.append("image", cardImage);
       
       const responseCardImage = await axios.post(
-        "http://localhost:3000/upload",
+        "https://travelmate-backend-zuqb.onrender.com/upload",
         formDataCardImage,
         {
           headers: { Accept: "application/json" },
@@ -191,7 +191,7 @@ const AddGuide = () => {
         console.log("Updated Details:", updatedGuideDetails);
         
         const response = await axios.post(
-          "http://localhost:3000/travelmate/addGuide", 
+          "https://travelmate-backend-zuqb.onrender.com/travelmate/addGuide", 
           updatedGuideDetails
         );
         

@@ -26,7 +26,7 @@ const ViewHotel = () => {
     const fetchAccommodationDetails = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/travelmate/viewAccommodation/${id}`
+          `https://travelmate-backend-zuqb.onrender.com/travelmate/viewAccommodation/${id}`
         );
 
         if (response.data.success) {
@@ -72,7 +72,7 @@ const ViewHotel = () => {
       console.log("accommodationDetails", accommodationDetails);
 
       const response = await axios.put(
-        `http://localhost:3000/travelmate/updateAccommodation/${id}`,
+        `https://travelmate-backend-zuqb.onrender.com/travelmate/updateAccommodation/${id}`,
         accommodationDetails
       );
 

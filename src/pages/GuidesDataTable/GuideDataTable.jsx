@@ -70,7 +70,7 @@ const GuidesDataTable = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch("http://localhost:3000/travelmate/allGuides");
+      const response = await fetch("https://travelmate-backend-zuqb.onrender.com/travelmate/allGuides");
       
       if (!response.ok) {
         throw new Error(`Server returned ${response.status}: ${response.statusText}`);
@@ -139,7 +139,7 @@ const GuidesDataTable = () => {
 
     try {
       const deletionPromises = selectedRows.map(row => 
-        fetch("http://localhost:3000/travelmate/deleteGuide", {
+        fetch("https://travelmate-backend-zuqb.onrender.com/travelmate/deleteGuide", {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",

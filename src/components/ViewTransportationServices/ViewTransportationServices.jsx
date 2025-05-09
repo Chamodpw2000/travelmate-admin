@@ -21,7 +21,7 @@ function ViewTransportationService() {
     const fetchTransportationService = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/travelmate/viewTransportationService/${id}`
+          `https://travelmate-backend-zuqb.onrender.com/travelmate/viewTransportationService/${id}`
         );
         if (response.data.success) {
           setTransportationServiceDetails(response.data.data);
@@ -62,7 +62,7 @@ function ViewTransportationService() {
     e.preventDefault();
     try {
       const response = await axios.put(
-        `http://localhost:3000/travelmate/updateTransportationService/${id}`,
+        `https://travelmate-backend-zuqb.onrender.com/travelmate/updateTransportationService/${id}`,
         transportationServiceDetails
       );
 

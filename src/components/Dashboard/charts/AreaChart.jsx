@@ -6,7 +6,7 @@ const AreaChart = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/guide-analytics/area-distribution')
+    axios.get('https://travelmate-backend-zuqb.onrender.com/api/guide-analytics/area-distribution')
       .then(res => {
         const formatted = res.data.map(item => ({ name: item._id, value: item.count }));
         setData(formatted);

@@ -4,7 +4,7 @@ import axios from 'axios';
 export const AuthContext = createContext();
 
 // Your backend base URL
-const API_URL = 'http://localhost:3000';
+const API_URL = 'https://travelmate-backend-zuqb.onrender.com';
 
 export const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);

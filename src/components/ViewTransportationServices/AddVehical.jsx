@@ -90,7 +90,7 @@ const AddVehicle = () => {
             console.log(data);
             
     
-            await axios.post('http://localhost:3000/transportation/addVehical', data);
+            await axios.post('https://travelmate-backend-zuqb.onrender.com/transportation/addVehical', data);
             
             setIsLoading(false);
             

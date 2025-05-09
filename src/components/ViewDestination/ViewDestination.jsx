@@ -46,7 +46,7 @@ const ViewDestination = () => {
   useEffect(() => {
     const fetchDestinationDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/travelmate/viewDestination/${id}`);
+        const response = await axios.get(`https://travelmate-backend-zuqb.onrender.com/travelmate/viewDestination/${id}`);
         if (response.data.success) {
           setDestinationDetails(response.data.data);
         } else {
@@ -90,7 +90,7 @@ const ViewDestination = () => {
       
     try {
       const response = await axios.put(
-        `http://localhost:3000/travelmate/updateDestination/${id}`,
+        `https://travelmate-backend-zuqb.onrender.com/travelmate/updateDestination/${id}`,
         destinationDetails
       );
 

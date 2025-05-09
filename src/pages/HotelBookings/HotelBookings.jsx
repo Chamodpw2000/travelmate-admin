@@ -22,7 +22,7 @@ const HotelBookings = () => {
 
         if (result.isConfirmed) {
             try {
-                const response = await axios.put("http://localhost:3000/booking/completebooking", null, {
+                const response = await axios.put("https://travelmate-backend-zuqb.onrender.com/booking/completebooking", null, {
                     params: { id: bookingId }
                 });
 
@@ -62,7 +62,7 @@ const HotelBookings = () => {
 
         if (result.isConfirmed) {
             try {
-                const response = await  axios.delete("http://localhost:3000/booking/deletebooking", {
+                const response = await  axios.delete("https://travelmate-backend-zuqb.onrender.com/booking/deletebooking", {
                     params: { id: bookingId }
                 })
 
@@ -97,7 +97,7 @@ const HotelBookings = () => {
         const fetchBookings = async () => {
             setLoading(true);
             try {
-                const response = await axios.get("http://localhost:3000/booking/getallbookings");
+                const response = await axios.get("https://travelmate-backend-zuqb.onrender.com/booking/getallbookings");
                 setBookings(response.data);
                 console.log("Bookings are", response.data);
                 

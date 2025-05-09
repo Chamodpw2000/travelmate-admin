@@ -39,7 +39,7 @@ const ViewGuide = () => {
   useEffect(() => {
     const fetchGuideDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/travelmate/viewGuide/${id}`);
+        const response = await axios.get(`https://travelmate-backend-zuqb.onrender.com/travelmate/viewGuide/${id}`);
         if (response.data.success) {
           setGuideDetails(response.data.data);
         } else {
@@ -68,7 +68,7 @@ const ViewGuide = () => {
   const handleSaveChanges = async () => {
     try {
       const response = await axios.put(
-        `http://localhost:3000/travelmate/updateGuide/${id}`,
+        `https://travelmate-backend-zuqb.onrender.com/travelmate/updateGuide/${id}`,
         guideDetails
       );
 

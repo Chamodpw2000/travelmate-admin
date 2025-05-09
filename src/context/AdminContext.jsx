@@ -8,7 +8,7 @@ const AdminContextProvider = (props) => {
     const [allAccomodations, setAllAccomodations] = useState([]);
 
     useEffect (() => {
-        axios.get('http://localhost:3000/travelmate/allAccomodations')
+        axios.get('https://travelmate-backend-zuqb.onrender.com/travelmate/allAccomodations')
         .then((response) => {
             console.log('response.data', response.data);
             setAllAccomodations(response.data);

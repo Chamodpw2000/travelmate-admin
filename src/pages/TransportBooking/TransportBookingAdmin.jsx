@@ -23,7 +23,7 @@ const TransportBookingsAdmin = () => {
 
         if (result.isConfirmed) {
             try {
-                const response = await axios.put("http://localhost:3000/transportation/completeguidebooking", null, {
+                const response = await axios.put("https://travelmate-backend-zuqb.onrender.com/transportation/completeguidebooking", null, {
                     params: { id: bookingId },
                 });
 
@@ -78,7 +78,7 @@ const TransportBookingsAdmin = () => {
 
             }
             try {
-                const response = await axios.put("http://localhost:3000/transportation/canclebooking", {
+                const response = await axios.put("https://travelmate-backend-zuqb.onrender.com/transportation/canclebooking", {
                     bookingData
                 })
 
@@ -142,7 +142,7 @@ const TransportBookingsAdmin = () => {
 
             
             try {
-                const response = await axios.put("http://localhost:3000/transportation/completebooking", {
+                const response = await axios.put("https://travelmate-backend-zuqb.onrender.com/transportation/completebooking", {
                     bookingData
                 })
 
@@ -179,7 +179,7 @@ const TransportBookingsAdmin = () => {
         const fetchBookings = async () => {
             setLoading(true);
             try {
-                const response = await axios.get("http://localhost:3000/transportation/getallbookings");
+                const response = await axios.get("https://travelmate-backend-zuqb.onrender.com/transportation/getallbookings");
                 setBookings(response.data);
                 console.log(response.data);
                 

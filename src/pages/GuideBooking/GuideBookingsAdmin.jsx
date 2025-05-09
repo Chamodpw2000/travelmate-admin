@@ -22,7 +22,7 @@ const GuideBookingsAdmin = () => {
 
         if (result.isConfirmed) {
             try {
-                const response = await axios.put("http://localhost:3000/booking/completeguidebooking", null, {
+                const response = await axios.put("https://travelmate-backend-zuqb.onrender.com/booking/completeguidebooking", null, {
                     params: { id: bookingId },
                 });
 
@@ -62,7 +62,7 @@ const GuideBookingsAdmin = () => {
 
         if (result.isConfirmed) {
             try {
-                const response = await axios.put("http://localhost:3000/booking/cancleguidebooking", null, {
+                const response = await axios.put("https://travelmate-backend-zuqb.onrender.com/booking/cancleguidebooking", null, {
                     params: { id: bookingId },
                 });
 
@@ -94,7 +94,7 @@ const GuideBookingsAdmin = () => {
         const fetchBookings = async () => {
             setLoading(true);
             try {
-                const response = await axios.get("http://localhost:3000/booking/getallguidbookings");
+                const response = await axios.get("https://travelmate-backend-zuqb.onrender.com/booking/getallguidbookings");
                 setBookings(response.data);
                 console.log(response.data);
                 

@@ -39,7 +39,7 @@ const UpdateRestaurant = () => {
     const fetchRestaurantDetails = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/travelmate/viewRestaurant/${id}`
+          `https://travelmate-backend-zuqb.onrender.com/travelmate/viewRestaurant/${id}`
         );
         if (response.data.success) {
           setRestaurantDetails(response.data.data);
@@ -112,7 +112,7 @@ const UpdateRestaurant = () => {
     e.preventDefault();
     try {
       const response = await axios.put(
-        `http://localhost:3000/travelmate/updateRestaurant/${id}`,
+        `https://travelmate-backend-zuqb.onrender.com/travelmate/updateRestaurant/${id}`,
         restaurantDetails
       );
 

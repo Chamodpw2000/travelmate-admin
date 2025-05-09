@@ -6,7 +6,7 @@ const RatingChart = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/guide-analytics/rating-distribution')
+    axios.get('https://travelmate-backend-zuqb.onrender.com/api/guide-analytics/rating-distribution')
       .then(res => {
         const formatted = res.data.map(item => ({
           name: item._id.toString(),

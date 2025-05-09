@@ -176,7 +176,7 @@ const AddRestaurant = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/travelmate/add-restaurant",
+        "https://travelmate-backend-zuqb.onrender.com/travelmate/add-restaurant",
         restaurantDetails
       );
 

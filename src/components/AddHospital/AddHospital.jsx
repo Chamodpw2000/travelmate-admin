@@ -79,7 +79,7 @@ const AddHospital = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/travelmate/add-hospital",
+        "https://travelmate-backend-zuqb.onrender.com/travelmate/add-hospital",
         hospitalDetails
       );
       console.log("Hospital added successfully", response.data);

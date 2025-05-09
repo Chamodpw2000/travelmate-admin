@@ -61,7 +61,7 @@ const TransportModeDataTable = () => {
 
   const fetchTransportationServices = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/travelmate/allTransportationServices');
+      const response = await axios.get('https://travelmate-backend-zuqb.onrender.com/travelmate/allTransportationServices');
       setRecords(response.data);
       setFilteredRecords(response.data);
     } catch (error) {
@@ -87,7 +87,7 @@ const TransportModeDataTable = () => {
 
   async function handleDeleteSelected() {try {
     for (let row of selectedRows) {
-      await fetch("http://localhost:3000/travelmate/deleteTransportationService", {
+      await fetch("https://travelmate-backend-zuqb.onrender.com/travelmate/deleteTransportationService", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
