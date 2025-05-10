@@ -49,9 +49,9 @@ const DestinationAnalytics = () => {
         <div className="p-4 bg-white rounded-lg shadow-md">
           <DistanceHistogram data={stats.distanceDistribution} />
         </div>
-        <div className="p-4 bg-white rounded-lg shadow-md">
+        {/* <div className="p-4 bg-white rounded-lg shadow-md">
           <RatingChart data={stats.ratingDistribution} />
-        </div>
+        </div> */}
         <div className="p-4 bg-white rounded-lg shadow-md">
           <BestTimeChart data={stats.bestTimeDistribution} />
         </div>
